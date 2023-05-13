@@ -1,42 +1,17 @@
 package com.example.jeu6;
 
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class Row {
-    private List<Card> cards;
+    private ArrayList<Card> cards;
 
     public Row() {
-        this.cards = new ArrayList<>();
+        this.cards = new ArrayList<Card>(); // Initialisation de la liste de cartes dans row
     }
 
-    public void addCard(Card card) {
-        int index = 0;
-        for (Card c : cards) {
-            if (card.getNumber() < c.getNumber()) {
-                break;
-            }
-            index++;
-        }
-        cards.add(index, card);
+    public void addCardToRow(Card card) { // Ajout d'une carte à la liste de cartes dans row
+        this.cards.add(card);
     }
 
-    public List<Card> getCards() {
-        return cards;
-    }
-
-    public Card getLastCard() {
-        if (cards.isEmpty()) {
-            return null;
-        }
-        return cards.get(cards.size() - 1);
-    }
-
-    public boolean isFull() {
-        return cards.size() == 5;
-    }
-
-    public void clear() {
-        cards.clear();
-    }
 }

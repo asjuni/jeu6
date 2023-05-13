@@ -1,41 +1,31 @@
 package com.example.jeu6;
-import java.util.ArrayList;
-import java.util.Collections;
+
+import java.util.List;
+import java.util.Random;
 
 public class Deck {
-    private ArrayList<Card> cards;
+    private List<Card> cards;
 
-    public Deck() {
-        // Créer le paquet de cartes initial
-        cards = new ArrayList<>();
-        initializeDeck();
-    }
-
-    private void initializeDeck() {
-        // Ajouter les cartes au paquet (ex: numéros de cartes de 1 à 104)
-        for (int i = 1; i <= 104; i++) {
-            cards.add(new Card(i));
-        }
+    public Deck(List<Card> cards) {
+        // Initialisation du paquet de cartes
+        // ...
+        this.cards = cards;
     }
 
     public void shuffle() {
-        // Mélanger les cartes du paquet de manière aléatoire
-        Collections.shuffle(cards);
-    }
+        int deckSize = cards.size();
+        Random random = new Random();
 
-    public Card drawCard() {
-        // Tirer une carte du paquet et la renvoyer
-        if (isEmpty()) {
-            return null; // Pas de carte disponible, retourne null
-        } else {
-            Card card = cards.get(0); // Récupérer la première carte
-            cards.remove(0); // Retirer la carte du paquet
-            return card;
+        for (int i = deckSize - 1; i > 0; i--) {
+            // Générer un index aléatoire entre 0 et i inclus
+            int j = random.nextInt(i + 1);
+
+            // Échanger les cartes à l'index i et j
+            Card temp = cards.get(i);
+            cards.set(i, cards.get(j));
+            cards.set(j, temp);
         }
     }
 
-    public boolean isEmpty() {
-        // Vérifier si le paquet de cartes est vide
-        return cards.isEmpty();
-    }
+
 }
