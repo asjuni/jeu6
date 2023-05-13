@@ -1,29 +1,125 @@
 package com.example.jeu6;
 
-public class Card {
+public enum Card {
+    CARD_1("1", "Bœufs"),
+    CARD_2("2", "Bœufs"),
+    CARD_3("3", "Bœufs"),
+    CARD_4("4", "Bœufs"),
+    CARD_5("5", "Bœufs"),
+    CARD_6("6", "Bœufs"),
+    CARD_7("7", "Bœufs"),
+    CARD_8("8", "Bœufs"),
+    CARD_9("9", "Bœufs"),
+    CARD_10("10", "Bœufs"),
+    CARD_11("11", "Bœufs"),
+    CARD_12("12", "Bœufs"),
+    CARD_13("13", "Bœufs"),
+    CARD_14("14", "Bœufs"),
+    CARD_15("15", "Bœufs"),
+    CARD_16("16", "Bœufs"),
+    CARD_17("17", "Bœufs"),
+    CARD_18("18", "Bœufs"),
+    CARD_19("19", "Bœufs"),
+    CARD_20("20", "Bœufs"),
+    CARD_21("21", "Bœufs"),
+    CARD_22("22", "Bœufs"),
+    CARD_23("23", "Bœufs"),
+    CARD_24("24", "Bœufs"),
+    CARD_25("25", "Bœufs"),
+    CARD_26("26", "Bœufs"),
+    CARD_27("27", "Bœufs"),
+    CARD_28("28", "Bœufs"),
+    CARD_29("29", "Bœufs"),
+    CARD_30("30", "Bœufs"),
+    CARD_31("31", "Bœufs"),
+    CARD_32("32", "Bœufs"),
+    CARD_33("33", "Bœufs"),
+    CARD_34("34", "Bœufs"),
+    CARD_35("35", "Bœufs"),
+    CARD_36("36", "Bœufs"),
+    CARD_37("37", "Bœufs"),
+    CARD_38("38", "Bœufs"),
+    CARD_39("39", "Bœufs"),
+    CARD_40("40", "Bœufs"),
+    CARD_41("41", "Bœufs"),
+    CARD_42("42", "Bœufs"),
+    CARD_43("43", "Bœufs"),
+    CARD_44("44", "Bœufs"),
+    CARD_45("45", "Bœufs"),
+    CARD_46("46", "Bœufs"),
+    CARD_47("47", "Bœufs"),
+    CARD_48("48", "Bœufs"),
+    CARD_49("49", "Bœufs"),
+    CARD_50("50", "Bœufs"),
+    CARD_51("51", "Bœufs"),
+    CARD_52("52", "Bœufs"),
+    CARD_53("53", "Bœufs"),
+    CARD_54("54", "Bœufs"),
+    CARD_55("55", "Bœufs"),
+    CARD_56("56", "Bœufs"),
+    CARD_57("57", "Bœufs"),
+    CARD_58("58", "Bœufs"),
+    CARD_59("59", "Bœufs"),
+    CARD_60("60", "Bœufs"),
+    CARD_61("61", "Bœufs"),
+    CARD_62("62", "Bœufs"),
+    CARD_63("63", "Bœufs"),
+    CARD_64("64", "Bœufs"),
+    CARD_65("65", "Bœufs"),
+    CARD_66("66", "Bœufs"),
+    CARD_67("67", "Bœufs"),
+    CARD_68("68", "Bœufs"),
+    CARD_69("69", "Bœufs"),
+    CARD_70("70", "Bœufs"),
+    CARD_71("71", "Bœufs"),
+    CARD_72("72", "Bœufs"),
+    CARD_73("3", "Bœufs"),
+    CARD_74("74", "Bœufs"),
+    CARD_75("75", "Bœufs"),
+    CARD_76("76", "Bœufs"),
+    CARD_77("77", "Bœufs"),
+    CARD_78("78", "Bœufs"),
+    CARD_79("79", "Bœufs"),
+    CARD_80("80", "Bœufs"),
+    CARD_81("81", "Bœufs"),
+    CARD_82("82", "Bœufs"),
+    CARD_83("83", "Bœufs"),
+    CARD_84("84", "Bœufs"),
+    CARD_85("3", "Bœufs"),
+    CARD_86("86", "Bœufs"),
+    CARD_87("87", "Bœufs"),
+    CARD_88("88", "Bœufs"),
+    CARD_89("89", "Bœufs"),
+    CARD_90("90", "Bœufs"),
+    CARD_91("91", "Bœufs"),
+    CARD_92("92", "Bœufs"),
+    CARD_93("93", "Bœufs"),
+    CARD_94("94", "Bœufs"),
+    CARD_95("95", "Bœufs"),
+    CARD_96("96", "Bœufs"),
+    CARD_97("97", "Bœufs"),
+    CARD_98("98", "Bœufs"),
+    CARD_99("99", "Bœufs"),
+    CARD_100("100", "Bœufs"),
+    CARD_101("101", "Bœufs"),
+    CARD_102("102", "Bœufs"),
+    CARD_103("103", "Bœufs"),
+    CARD_104("104", "Bœufs");
+  // Constructeur de l'énumération Card
     private String rank;
-    private String suit;
+    private String name;
 
-    public Card(String rank, String suit) {
+    private Card(String rank, String name) {
         this.rank = rank;
-        this.suit = suit;
+        this.name = name;
     }
 
     public String getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank;
+    public String getName() {
+        return name;
     }
-
-    public String getSuit() {
-        return suit;
     }
-
-    public void setSuit(String suit) {
-        this.suit = suit;
-    }
-}
-
 
