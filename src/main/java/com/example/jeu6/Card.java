@@ -1,14 +1,29 @@
 package com.example.jeu6;
 
 public class Card {
-    private int number;
+    private String rank;
+    private String suit;
 
-    public Card(int number) {
-        this.number = number;
+    public Card(String rank, String suit) {
+        this.rank = rank;
+        this.suit = suit;
     }
 
-    public int getNumber() {
-        return number;
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public void setSuit(String suit) {
+        this.suit = suit;
     }
 }
+
 
