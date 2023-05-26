@@ -17,9 +17,10 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.26</version>
+      <version>1.18.20</version> <!-- Utilisez la dernière version disponible -->
       <scope>provided</scope>
     </dependency>
+
 
     <dependency>
       <groupId>org.openjfx</groupId>

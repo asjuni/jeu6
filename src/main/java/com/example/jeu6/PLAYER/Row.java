@@ -1,27 +1,26 @@
 package com.example.jeu6.PLAYER;
 
-
 import com.example.jeu6.CARD.Card;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Row {
-    private ArrayList<Card> cards;
+    private List<Card> cards;
 
     public Row() {
-        this.cards = new ArrayList<Card>(); // Initialisation de la liste de cartes dans row
+        this.cards = new ArrayList<>();
     }
 
     public void addCard(Card card) {
+        if (isFull()) {
+            throw new IllegalStateException("La rangée est déjà pleine");
+        }
         cards.add(card);
     }
 
     public List<Card> getCards() {
-        return cards;
+        return new ArrayList<>(cards); // Retourne une copie de la liste des cartes pour éviter les modifications externes
     }
 
     public Card getLastCard() {
@@ -37,5 +36,15 @@ public class Row {
 
     public void clear() {
         cards.clear();
+    }
+
+    public void removeCard(Card card) {
+        cards.remove(card);
+    }
+
+    public void removeLastCard() {
+        if (!cards.isEmpty()) {
+            cards.remove(cards.size() - 1);
+        }
     }
 }

@@ -1,18 +1,18 @@
 package com.example.jeu6.CARD;
 
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 
 public class Deck {
     private List<Card> cards;
 
     public Deck() {
-        this.cards = new ArrayList<>();
-        // Ajouter les cartes au paquet en utilisant l'enum
+        initializeDeck();
+    }
+
+    private void initializeDeck() {
+        cards = new ArrayList<>();
         for (Card card : Card.values()) {
             cards.add(card);
         }
@@ -23,13 +23,22 @@ public class Deck {
     }
 
     public Card drawCard() {
-        if (!cards.isEmpty()) {
+        if (!isEmpty()) {
             return cards.remove(0);
         }
         return null;
     }
 
+    public boolean isDeckEmpty() {
+        return cards.isEmpty();
+    }
+
+    public int getDeckSize() {
+        return cards.size();
+    }
+
     public boolean isEmpty() {
         return cards.isEmpty();
     }
+
 }
