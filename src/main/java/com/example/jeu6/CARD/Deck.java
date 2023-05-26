@@ -1,9 +1,11 @@
-package com.example.jeu6;
+package com.example.jeu6.CARD;
+
 
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 
 public class Deck {
     private List<Card> cards;

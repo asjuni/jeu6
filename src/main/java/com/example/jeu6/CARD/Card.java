@@ -1,4 +1,4 @@
-package com.example.jeu6;
+package com.example.jeu6.CARD;
 
 public enum Card {
     CARD_1("1", "Bœufs"),
@@ -105,7 +105,7 @@ public enum Card {
     CARD_102("102", "Bœufs"),
     CARD_103("103", "Bœufs"),
     CARD_104("104", "Bœufs");
-  // Constructeur de l'énumération Card
+    // Constructeur de l'énumération Card
     private String rank;
     private String name;
 
@@ -121,5 +121,4 @@ public enum Card {
     public String getName() {
         return name;
     }
-    }
-
+}

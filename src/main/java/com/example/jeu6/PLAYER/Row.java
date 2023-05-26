@@ -1,5 +1,10 @@
-package com.example.jeu6;
+package com.example.jeu6.PLAYER;
 
+
+import com.example.jeu6.CARD.Card;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,4 +39,3 @@ public class Row {
         cards.clear();
     }
 }
-
