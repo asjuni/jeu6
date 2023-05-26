@@ -1,5 +1,7 @@
 package com.example.jeu6.Game;
 
+import com.example.jeu6.PLAYER.Player;
+
 import java.util.LinkedList;
 import java.util.List;
 
