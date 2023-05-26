@@ -25,7 +25,7 @@ public class HelloApplication extends Application {
         System.out.println("Le 6 qui prend commence !");
         root.getChildren().add(gameView);
         Scene scene = new Scene(root, 1000, 1000);
-        this.stage.setTitle("6 qui prend!");
+        this.stage.setTitle("6 qui prend");
         this.stage.setScene(scene);
         this.stage.show();
     }
