@@ -1,6 +1,9 @@
 package com.example.jeu6;
 
+import com.example.jeu6.CARD.Deck;
 import com.example.jeu6.Game.Game;
+import com.example.jeu6.PLAYER.Player;
+import com.example.jeu6.PLAYER.Row;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,7 +23,13 @@ public class HelloApplication extends Application {
         this.stage = stage;
         VBox root = new VBox();
         GameView gameView = new GameView();
-        Game game = new Game();
+        Player Player1 = new Player(1);
+        Deck deck1 = new Deck();
+        Row row1 = new Row();
+        Row row2 = new Row();
+        Row row3 = new Row();
+        Row row4 = new Row();
+        Game game = new Game(new Player[]{Player1}, deck1, new Row[]{row1, row2, row3, row4});
         GamePresenter gamePresenter = new GamePresenter(gameView, game, this);
         System.out.println("Le 6 qui prend commence !");
         root.getChildren().add(gameView);

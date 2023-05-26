@@ -14,6 +14,10 @@ public class Player {
     private ArrayList<Card> hand;
     private int score;
 
+    public Player(int i) {
+        //Créé le nombre de player
+    }
+
     public int playCard(Row[] rows) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Card> handPlayer = getHand();

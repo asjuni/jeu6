@@ -25,7 +25,7 @@ public class GamePresenter {
         this.application = application;
     }
 
-    public void handleClick(MouseEvent e) {
+    /*public void handleClick(MouseEvent e) {
         System.out.println("Vous avez cliqué sur une carte");
         if (game.isGameOver()) {
             System.out.println("Fin du jeu !");
@@ -42,5 +42,5 @@ public class GamePresenter {
             ));
             timeline.play();
         }
-    }
+    }*/
 }
