@@ -2,6 +2,7 @@ package com.example.jeu6;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Row {
     private ArrayList<Card> cards;
@@ -10,8 +11,27 @@ public class Row {
         this.cards = new ArrayList<Card>(); // Initialisation de la liste de cartes dans row
     }
 
-    public void addCardToRow(Card card) { // Ajout d'une carte à la liste de cartes dans row
-        this.cards.add(card);
+    public void addCard(Card card) {
+        cards.add(card);
     }
 
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public Card getLastCard() {
+        if (!cards.isEmpty()) {
+            return cards.get(cards.size() - 1);
+        }
+        return null;
+    }
+
+    public boolean isFull() {
+        return cards.size() == 5;
+    }
+
+    public void clear() {
+        cards.clear();
+    }
 }
+
