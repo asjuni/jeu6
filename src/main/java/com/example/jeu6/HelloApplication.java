@@ -16,11 +16,10 @@ import java.util.Objects;
 
 public class HelloApplication extends Application {
 
-    Stage stage;
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        this.stage = stage;
         VBox root = new VBox();
         GameView gameView = new GameView();
         Player Player1 = new Player(1);
@@ -33,10 +32,6 @@ public class HelloApplication extends Application {
         GamePresenter gamePresenter = new GamePresenter(gameView, game, this);
         System.out.println("Le 6 qui prend commence !");
         root.getChildren().add(gameView);
-        Scene scene = new Scene(root, 1000, 1000);
-        this.stage.setTitle("6 qui prend");
-        this.stage.setScene(scene);
-        this.stage.show();
     }
 
     public void declareWinner(int player) {
@@ -51,9 +46,6 @@ public class HelloApplication extends Application {
         );
         root.getChildren().add(label);
         Scene scene = new Scene(root, 1000, 1000);
-        this.stage.setTitle("Fin du jeu !");
-        this.stage.setScene(scene);
-        this.stage.show();
     }
 
     public static void main(String[] args) {
