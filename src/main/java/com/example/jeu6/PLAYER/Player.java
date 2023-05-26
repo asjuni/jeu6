@@ -1,39 +1,41 @@
 package com.example.jeu6.PLAYER;
 
-
 import com.example.jeu6.CARD.Card;
+import lombok.*;
 
 import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Arrays;
+import java.util.Scanner;
 public class Player {
-    private List<Card> hand;
-    private int score;
+    @Getter @Setter ArrayList<Card> hand;
+    @Getter @Setter int score;
 
-    public Player() {
-        hand = new ArrayList<>();
-        score = 0;
+    public int playCard(){
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Card> handPlayer = this.returnHand(); //On cherche la main du player
+        System.out.println("Veuillez choisir une carte :");
+        System.out.println(handPlayer);                 //On montre la main au player
+        int card = scanner.nextInt();                   //Player choisit une carte
+        return (this.chooseRow(card));
     }
 
-    public void playCard() {
-        // Logique de jeu pour déterminer où poser la carte
-        // ...
-        // Code pour jouer la carte
-    }
-
-    public int chooseRow() {
-        // Logique de jeu pour choisir une rangée où poser la carte
-        // ...
-        // Retourner le numéro de la rangée choisie
+    private int chooseRow(int card){
+        Card rowOne = row1.getLastCard();
+        Card rowTwo = row2.getLastCard();
+        Card rowThree = row3.getLastCard();
+        Card rowFour = row4.getLastCard();
+        ArrayList<Card> listOfLastCard = new ArrayList<>(Arrays.asList(rowOne,rowTwo,rowThree,rowFour));
+        for (int i =0; i < listOfLastCard.size(); i++){
+            int numberCard = listOfLastCard.get(i).ordinal();
+            if (card < numberCard){
+                return i - 1;
+            }
+        }
         return 0;
     }
 
-    public List<Card> getHand() {
-        return hand;
+    private ArrayList<Card> returnHand(){
+        return this.getHand();
     }
 
-    public int getScore() {
-        return score;
-    }
 }
-

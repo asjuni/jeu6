@@ -6,6 +6,9 @@ import com.example.jeu6.CARD.Card;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Row {
     private ArrayList<Card> cards;
 
@@ -36,4 +39,3 @@ public class Row {
         cards.clear();
     }
 }
-
