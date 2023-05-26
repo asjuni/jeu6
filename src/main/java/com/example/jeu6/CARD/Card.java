@@ -1,4 +1,4 @@
-package com.example.jeu6;
+package com.example.jeu6.CARD;
 
 public enum Card {
     CARD_1("1", "Bœufs"),
